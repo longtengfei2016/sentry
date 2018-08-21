@@ -5,6 +5,7 @@
     }, false)
   }
   function test(){
+    var a = [];
     if(a.length>0){
       console.log('error')
     }

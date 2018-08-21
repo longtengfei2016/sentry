@@ -4,6 +4,7 @@
   "description": "",
   "main": "error.js",
   "dependencies": {
+    "raven-js": "^3.26.4",
     "webpack": "^4.16.5"
   },
   "devDependencies": {

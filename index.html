@@ -1,12 +1,17 @@
+<!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">
+	<title>sentry test</title>
+    </head>
     <body>
         <div class="test">test sentry</div>
         <button id="container">上报</button>
-        <script src="https://cdn.ravenjs.com/3.26.4/raven.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.ravenjs.com/3.26.2/raven.min.js" crossorigin="anonymous"></script>
         <script src="./dist/bundle.js"></script>
         <script>
-            Raven.config('https://e4b054af7ae54bf1a2554d7f7d9aba5b@sentry.io/1263223',{
-                release: '1.0.1-test'
+            Raven.config('http://6efa94d9b4474bed933bc4849c4e8ec3@47.94.211.9:9000/2',{
+                release: 'maluge@1.0.1'
             }).install();
             test();
         </script>
