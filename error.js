@@ -1,7 +1,7 @@
 (() => {
   window.onload = () => {
     document.getElementById('container').addEventListener('click', e => {
-      console.log(window['aaa'].aaa)
+      console.log(window['aa'].aaa)
     }, false)
   }
   function test(){
