@@ -7,12 +7,26 @@
     <body>
         <div class="test">test sentry</div>
         <button id="container">上报</button>
+	<button id="warning">抛出警告</button>
+	<button id="info">抛出消息</button>	
         <script src="https://cdn.ravenjs.com/3.26.2/raven.min.js" crossorigin="anonymous"></script>
         <script src="./dist/bundle.js"></script>
         <script>
             Raven.config('http://6efa94d9b4474bed933bc4849c4e8ec3@47.94.211.9:9000/2',{
                 release: 'maluge@1.0.1'
             }).install();
+	    Raven.setUserContext({
+		id: "00001",
+		usename: "longtengfei",
+		email: "longtengfly@163.com",
+		ip_address: ""
+	    });
+	    Raven.captureMessage('warning message',{
+		level: 'warning'
+	    });
+	    Raven.captureMessage('info message',{
+                level: 'info'
+            });
             test1();
         </script>
     </body>
